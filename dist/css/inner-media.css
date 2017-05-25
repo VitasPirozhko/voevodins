@@ -1,4 +1,8 @@
 @media screen and (max-width: 1280px){
+    
+    .filters-title{
+        font-size: 11px;
+    }
 
     .mod4-block-link-text{
         width: 87%;
@@ -16,6 +20,7 @@
 }
 
 @media screen and (max-width: 1024px){
+
     .container_mod1_1 .content-wraper {
         max-width: 865px;
     }
@@ -221,6 +226,10 @@
 }
 
 @media screen and (max-width: 767px){
+
+    .filter-open-button{
+        position: absolute;
+    }
 
     .filter-container{
         z-index: 9999;
