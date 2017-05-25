@@ -45,38 +45,47 @@
   .menu-opened .menu-mobile.no-desktop {
     display: block;
   }
-  .menu-opened .burger span {
+  .menu-opened .burger > div span {
     background: transparent;
   }
-  .menu-opened .burger span:before,
-  .menu-opened .burger span:after {
+  .menu-opened .burger > div span:before,
+  .menu-opened .burger > div span:after {
     margin: 0;
   }
-  .menu-opened .burger span:before {
+  .menu-opened .burger > div span:before {
     bottom: 0;
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
   }
-  .menu-opened .burger span:after {
+  .menu-opened .burger > div span:after {
     top: 0;
     -ms-transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
   .burger {
+    width: 45px;
+    height: 45px;
     position: absolute;
-    top: 28px;
-    right: 20px;
+    top: 15px;
+    right: 10px;
+    z-index: 11;
+  }
+  .burger > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -8px 0 0 -13px;
     width: 27px;
     height: 17px;
     display: inline-block;
     vertical-align: middle;
     z-index: 11;
   }
-  .burger span,
-  .burger span:before,
-  .burger span:after {
+  .burger > div span,
+  .burger > div span:before,
+  .burger > div span:after {
     position: absolute;
     left: 0;
     display: block;
@@ -89,19 +98,19 @@
     -ms-transition: all 0.4s ease;
     transition: all 0.4s ease;
   }
-  .burger span {
+  .burger > div span {
     top: 50%;
   }
-  .burger span:before,
-  .burger span:after {
+  .burger > div span:before,
+  .burger > div span:after {
     content: '';
     height: 100%;
   }
-  .burger span:before {
+  .burger > div span:before {
     bottom: 100%;
     margin-bottom: 5px;
   }
-  .burger span:after {
+  .burger > div span:after {
     top: 100%;
     margin-top: 5px;
   }
@@ -245,7 +254,8 @@
   }
   .questions-popup,
   .back-popup {
-    writing-mode: lr-tb;
+    -webkit-writing-mode: initial;
+    writing-mode: initial;
     transform: none;
     border: 0;
     position: static;
@@ -338,7 +348,10 @@
     z-index: 10;
     width: 70%;
   }
-  .slide-index-mobile-item.hover img {
+  .slide-index-mobile-item.hover {
+    background: #c68d58;
+  }
+  .slide-index-mobile-item.hover .slide-index-mobile-inner {
     opacity: 0.5;
   }
   .slide-index-mobile-item:first-child {
@@ -366,6 +379,9 @@
     overflow: hidden;
     /* width: 200%; */
     position: relative;
+    background: #c68d58;
+  }
+  .slide-index-mobile-inner.hover {
     background: #c68d58;
   }
   .slide-index-mobile-inner span {
@@ -660,7 +676,7 @@
     padding-top: 110px;
   }
   .menu-opened {
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   .product-card-main-info-content .fon-8 {
     height: 67px;
@@ -669,7 +685,6 @@
 }
 @media screen and (max-width: 400px) {
   .g-recaptcha {
-    -webkit-transform-origin: 0 0;
     transform: scale(0.92);
   }
 }
@@ -735,7 +750,11 @@
     background-image: url('../images/icons/second-hor.png');
   }
 }
-@media screen and (max-width: 600px) and (orientation: landscape) {
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .container-404 {
+    padding-bottom: 90px;
+    height: auto;
+  }
   .slide-index-mobile-item:first-child img {
     margin-left: 20%;
   }
@@ -744,5 +763,8 @@
   }
   .menu-mobile li {
     margin-top: 10px;
+  }
+  .logo {
+    text-align: left;
   }
 }

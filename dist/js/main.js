@@ -8,7 +8,7 @@ $(document).ready(function(){
 	var show = true;
 	function jHover($el,e,move){
 
-		if(!background.length){
+		if(!background.length || $(e.target).closest('.popups').length){
 			return;
 		}
 		if(typeof move == 'undefined'){
@@ -332,9 +332,14 @@ $(document).ready(function(){
 			return false;
 		}
 		
-		el.css('padding-bottom',el.find('.map-wrap').height());
-		if(isMobile()){
-			el.removeAttr('padding-bottom','')
+		if(!isMobile()){
+			setTimeout(function(){
+				el.css('padding-bottom',el.find('.map-wrap:visible').height());
+			},0)
+			
+		}
+		else{
+			el.css('padding-bottom','')
 		}
 
 	}
@@ -429,9 +434,9 @@ $(document).ready(function(){
 
 	/*mobile*/
 
-	$('.burger').on('click',function(){
+	$('.burger').on('click tap',function(){
 
-		jBody.toggleClass('menu-opened')
+		jBody.toggleClass('menu-opened');
 		return false;
 
 	});

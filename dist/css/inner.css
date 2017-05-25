@@ -22,6 +22,7 @@ a{
 .select-form .secect-class-wrap{
     margin-left: 35px!important;
     z-index: 1;
+    width: 23%;
 }
 
 .select-form .secect-class-wrap:first-child{
@@ -29,7 +30,11 @@ a{
 }
 
 .select-form .jClever-element-select-wrapper{
-    width: 280px!important;
+    width: 100%!important;
+}
+
+.select-form .jClever-element{
+    width: 100%!important;
 }
 
 .select-form .jClever-element-select-wrapper{
@@ -116,6 +121,7 @@ a{
 
 .content-title{
     font-size: 50px;
+    font-size: 3.66vw;
     color: #505050;
     text-align: left;
     text-transform: uppercase;
@@ -174,7 +180,7 @@ a{
     bottom: 0;
 }
 
-.mod1-text{
+.mod1-text p{
     font-size: 14px;
     color: #505050;
     margin-top: 17px;
@@ -186,7 +192,7 @@ a{
     text-align: left;
     font-size: 0;
     position: relative;
-    margin-bottom: 107px;
+    margin-bottom: 13%;
 }
 
 .product-wrap:after{
@@ -471,6 +477,7 @@ a{
     text-align: right;
     position: relative;
     z-index: 10;
+    min-height: 333px;
 }
 
 .foto-text-wrap-two .text-wrap{
@@ -538,7 +545,7 @@ a{
 }
 
 .text-wrap-child .bx-viewport{
-    height: 233px!important;
+    height: 240px!important;
 }
 
 .text-wrap-child .bx-wrapper .bx-pager{
@@ -622,7 +629,7 @@ a{
     box-sizing: border-box;
     border: 1px solid #d7cfc7;
     display: block;
-    margin: 50px auto 90px;
+    margin: 50px auto 10%;
 }
 
 .container_mod1_1 .menu-index{
@@ -858,7 +865,7 @@ a:hover{
     padding-bottom: 115px;
 }
 
-.mod6-text-wrap{
+.text-1-6-wrap p{
     font-size: 14px;
     color: #505050;
     margin-top: 27px;
@@ -868,18 +875,18 @@ a:hover{
     margin-top: 44px;
 }
 
-.mod6-text-list{
+.text-1-6-wrap ul{
     margin-left: 35px;
     margin-top: 27px;
 }
 
-.mod6-text-list li{
+.text-1-6-wrap ul li{
     font-size: 14px;
     margin-top: 4px;
     position: relative;
 }
 
-.mod6-text-list li:after{
+.text-1-6-wrap ul li:after{
     content: '';
     display: block;
     width: 4px;
@@ -892,7 +899,7 @@ a:hover{
     position: absolute;
 }
 
-.mod6-text-h1{
+.text-1-6-wrap h2{
     font-size: 13px;
     text-transform: uppercase;
     padding-left: 35px;
@@ -913,7 +920,8 @@ a:hover{
 
 .filter-container{
     width: 100%;
-    height: 512px;
+    padding-bottom: 35px;
+    box-sizing: border-box;
     background: #fff;
     top: -100%;
     left: 0;
@@ -1025,7 +1033,7 @@ a:hover{
 }
 
 .filters-block{
-    width: 19.9%;
+    /*width: 19.9%;*/
     display: inline-block;
     vertical-align: top;
     box-sizing: border-box;
@@ -1066,7 +1074,11 @@ a:hover{
 }
 
 .filter-open-button:hover{
-    border: none;
+    color: #8a7e77;
+}
+
+.filter-open-button:hover:after{
+    opacity: 0.6;
 }
 
 .opened-filter .filter-container{
@@ -1082,5 +1094,9 @@ a:hover{
 }
 
 .filter-head-button-mobile{
+    display: none;
+}
+
+.checkbox-avail-mob{
     display: none;
 }
