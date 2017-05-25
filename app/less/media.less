@@ -276,7 +276,8 @@
 	}
 	#questions{
 		max-height: none;
-		/* height: auto; */		
+		height: auto;	
+		min-height: 100%;
 	}
 	.watch-to-map{
 		font-size: 10px;
@@ -314,7 +315,7 @@
 		}
 		.row{
 			margin-top: 15px;
-			text-align: center;
+			text-align: left;
 		}
 		textarea{
 			height: 100px;
@@ -689,6 +690,7 @@
 @media screen and (max-width: 400px) {
 	.g-recaptcha{
 	    transform: scale(0.92);
+	    transform-origin: 0 0;
 	}
 }
 
@@ -781,5 +783,14 @@
 	}
 	.logo{
 		text-align: left;
+	}
+	.menu-mobile{
+		padding-top: 20px;
+		a{
+			font-size: 5vh;
+		}
+	}
+	.social{
+		bottom: 15px;
 	}
 }

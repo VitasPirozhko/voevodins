@@ -274,7 +274,8 @@
   }
   #questions {
     max-height: none;
-    /* height: auto; */
+    height: auto;
+    min-height: 100%;
   }
   .watch-to-map {
     font-size: 10px;
@@ -309,7 +310,7 @@
   }
   .form-popup .row {
     margin-top: 15px;
-    text-align: center;
+    text-align: left;
   }
   .form-popup textarea {
     height: 100px;
@@ -686,6 +687,7 @@
 @media screen and (max-width: 400px) {
   .g-recaptcha {
     transform: scale(0.92);
+    transform-origin: 0 0;
   }
 }
 @media screen and (max-width: 767px) and (orientation: landscape) {
@@ -766,5 +768,14 @@
   }
   .logo {
     text-align: left;
+  }
+  .menu-mobile {
+    padding-top: 20px;
+  }
+  .menu-mobile a {
+    font-size: 5vh;
+  }
+  .social {
+    bottom: 15px;
   }
 }
